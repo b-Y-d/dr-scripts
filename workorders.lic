@@ -207,10 +207,10 @@ class WorkOrders
       stock_number = 'stock-number'
     end
 
-    if exists?('surface polish')
+    if search?('surface polish')
       fput('get my surface polish')
       /(\d+)/ =~ bput('count my polish', 'The surface polish has \d+ uses remaining')
-      if Regexp.last_match(1).to_i <= 3
+      if Regexp.last_match(1).to_i < 3
         stow_hands
         dispose('polish')
         order_item(info['polish-room'], info['polish-number'])
@@ -240,6 +240,7 @@ class WorkOrders
         stow_hands
       end
 
+      bput("get #{info['stock-name']} rock", 'You get', 'What were') unless bone_carving
       find_shaping_room(@hometown, @engineering_room)
 
       wait_for_script_to_complete('carve', [recipe['chapter'], recipe['name'], info[stock_name], bone_carving ? 'stack' : 'rock', recipe['noun']])

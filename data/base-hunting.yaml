@@ -311,6 +311,18 @@ hunting_zones:
   - 9060
   - 9061
   - 9062
+  # https://elanthipedia.play.net/Dark_fiend                            70-90
+  # incorp undead, not very swarmy
+  dark_fiends:  
+  - 7830
+  - 7831
+  - 7832
+  - 7833
+  - 7834
+  - 7835
+  - 7836
+  - 7837
+  - 7838
   # https://elanthipedia.play.net/Fire_Sprite                             80-100
   # 80-100 Locksmithing/Skinning
   fire_sprites:
@@ -966,6 +978,14 @@ hunting_zones:
   - 3073
   - 3072
   - 3070
+  #https://elanthipedia.play.net/Giant_thicket_viper                    125-165
+  #https://elanthipedia.play.net/Piruati_serpent                        80-150
+  #Vipers spit poison, so you need a shield. Both critters in area.
+  vipers_and_serpents:
+  - 498
+  - 499
+  - 500
+  - 501  
   # https://elanthipedia.play.net/Heggarangi_boar                       150-200 
   heggarangi_boar:
   - 12124
